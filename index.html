@@ -12,6 +12,30 @@
             background-color: #222 !important;
             color: #fff !important;
         }
+
+        /* Custom Styles for Mobile Devices */
+        @media (max-width: 576px) {
+            .subscribe-btn-container {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .modal-body img {
+                width: 50%;
+            }
+
+            .card {
+                width: 50%; 
+                margin-bottom: 15px;
+            }
+
+            /* hilangkan tampilan dengan class berikut */
+            .hide-on-mobile {
+                display: none !important;
+            }
+
+            
+        }
     </style>
 
     
@@ -55,6 +79,8 @@
                 <a href="#" class="btn btn-link text-secondary" data-dismiss="modal">No, Thank you</a>
             </div>
         </div>
+
+
         <script>
             const subscribeButton = document.getElementById('subscribeBtn');
             const terimaKasihAlert = document.getElementById('alertTerimaKasih');
@@ -75,9 +101,11 @@
     </div>
   </div>
   
+
+  <!-- Nav Bar -->
   <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="/gametime.png" alt="Logo" width="30" class="d-inline-block align-text-top">
+        <a class="navbar-brand" href="index.html"><img src="gametime.png" alt="Logo" width="30" class="d-inline-block align-text-top">
             <b>Game Time</b>
             
         </a>
@@ -119,9 +147,8 @@
       
 
 
-
+  <!-- Content -->
     <div class = "container">
-        
         <div class="text-bg-danger p-3" style="background-color: rgb(159, 30, 30);">
             
             <div class = "col-12" style="color: rgb(255, 255, 255);" >
@@ -135,8 +162,7 @@
         <div class="row" style="padding: 1%;"> 
             
             <div class="col-2" >
-                
-              <nav id="navbar-example3" class="navbar navbar-dark flex-column align-items-stretch pe-4 border-end" style="position:fixed ; height: 100vh; overflow-y: auto;">
+              <nav id="navbar-example3" class="navbar navbar-dark flex-column align-items-stretch pe-4 border-end hide-on-mobile" style="position:fixed ; height: 100vh; overflow-y: auto;">
                 <nav class="nav nav-pills flex-column">
                     <div class="form-check form-switch" style=" top: 10px; right: 10px;">
                         <input class="form-check-input" type="checkbox" id="darkModeToggle">
@@ -235,9 +261,9 @@
               </div>
             </div>
 
-            <div class="col-3 " >
-                    <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;" >
-                        <img src="Card-img/cp2077.jpg" class="card-img-top" alt="...">
+            <div class="col-3 hide-on-mobile" >
+                    <div class="card shadow p-3 mb-5 bg-body rounded " style="width: 18rem;" >
+                        <img src="Card-img/hacker1.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">Cyberpunk 2045 Release Date</h5>
                           <p class="card-text">Cyberpunk 2077 is an action role-playing video game set in a dystopian future where players assume the role of V, a mercenary navigating the bustling metropolis of Night City. </p>
@@ -253,7 +279,7 @@
                         </div>
                     </div>
                     <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                        <img src="Card-img/wrench.jpg" class="card-img-top" alt="...">
+                        <img src="Card-img/hacker2.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">New Hacker Game "Watch_Dogs"</h5>
                           <p class="card-text">Watch Dogs: Legion is an action-adventure video game set in a near-future, dystopian version of London.</p>
@@ -266,12 +292,15 @@
     </div>
 </body>
 
-  <!-- Bootstrap JS (Optional, only if you need JavaScript features like closing the modal by clicking outside the modal) -->
+<!-- Bootstrap JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <!-- Bootstrap JavaScript (bundle with Popper.js) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Dark Mode Script -->
 <script>
     // Ambil tombol toggle dark mode
     const darkModeToggle = document.getElementById('darkModeToggle');
