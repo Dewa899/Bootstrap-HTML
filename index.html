@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Time</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Dark Mode Style */
+        body.dark-mode {
+            background-color: #222 !important;
+            color: #fff !important;
+        }
+    </style>
+
+    
+</head>
+
+
+<body>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel" style="color: #222 !important;">🎮 Welcome to Game Time!</h5>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body text-center" style="color: #222 !important;">
+    
+            <img src="modal/subscribe2.png" alt="Subscribe" width="50%" >
+            <p >Don't miss out on the latest gaming news, reviews, and exclusive offers! Subscribe now to stay in the loop and level up your gaming experience! 🎮✨</p>
+            
+        </div>
+        
+
+        <div class="modal-footer d-flex justify-content-center">
+            <!-- Alert Terima Kasih -->
+            <div id="alertTerimaKasih" class="alert alert-success d-none" role="alert">
+                Terimakasih sudah menjadi member GameTime!
+            </div>
+            
+            <div class="col-md-6 text-center">
+                <!-- Tombol Subscribe -->
+                <button id="subscribeBtn" type="button" class="btn btn-danger">
+                    Subscribe
+                </button>
+            </div>
+            
+            <div class="col-md-6 text-center">
+                <!-- Tautan No, Thank you -->
+                <a href="#" class="btn btn-link text-secondary" data-dismiss="modal">No, Thank you</a>
+            </div>
+        </div>
+        <script>
+            const subscribeButton = document.getElementById('subscribeBtn');
+            const terimaKasihAlert = document.getElementById('alertTerimaKasih');
+        
+            // Tambahkan event listener untuk mengatur tindakan saat tombol Subscribe ditekan
+            subscribeButton.addEventListener('click', function() {
+                // Tunjukkan alert Terima Kasih
+                terimaKasihAlert.classList.remove('d-none');
+                // Sembunyikan tombol Subscribe dan No, Thank You
+                subscribeButton.style.display = 'none';
+                document.querySelector('.text-secondary').style.display = 'none';
+            });
+        </script>
+        
+        
+        
+      </div>
+    </div>
+  </div>
+  
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="/gametime.png" alt="Logo" width="30" class="d-inline-block align-text-top">
+            <b>Game Time</b>
+            
+        </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#" data-toggle="modal" data-target="#exampleModal">Subscribe✨</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Link
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Link</a>
+          </li> -->
+        </ul>
+        
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-danger" type="submit">Search</button>
+        </form>
+  
+      </div>
+    </div>
+  </nav>
+      
+
+
+
+    <div class = "container">
+        
+        <div class="text-bg-danger p-3" style="background-color: rgb(159, 30, 30);">
+            
+            <div class = "col-12" style="color: rgb(255, 255, 255);" >
+                <h1 class = "text-center"><b>Game Time</b></h1>
+            </div>
+            <div class = "col-12" style="color: rgb(255, 255, 255);">
+                <h5 class = "text-center">Welcome to the Game Time</h5>
+            </div>
+        </div>
+
+        <div class="row" style="padding: 1%;"> 
+            
+            <div class="col-2" >
+                
+              <nav id="navbar-example3" class="navbar navbar-dark flex-column align-items-stretch pe-4 border-end" style="position: fixed; height: 100vh; overflow-y: auto;">
+                <nav class="nav nav-pills flex-column">
+                    <div class="form-check form-switch" style=" top: 10px; right: 10px;">
+                        <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                        <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+                      </div>
+                <a class="link-danger" href="#top-page">Title</a>
+                  <a class="link-danger" href="#item-1">Description</a>
+                  <nav class="nav nav-pills flex-column">
+                    <a class="link-danger ms-3 my-1" href="#item-1-1">Trailer 1</a>
+                    <a class="link-danger ms-3 my-1" href="#item-1-2">Item 1-2</a>
+                  </nav>
+                  <a class="link-danger" href="#item-2">Gameplay</a>
+                  <a class="link-danger" href="#item-3">Item 3</a>
+                  <nav class="nav nav-pills flex-column">
+                    <a class="link-danger ms-3 my-1" href="#item-3-1">Item 3-1</a>
+                    <a class="link-danger ms-3 my-1" href="#item-3-2">Real Joker</a>
+                  </nav>
+                </nav>
+              </nav>
+            </div>
+          
+            <div class="col-7" id="top-page">
+                <h1><b>GTA VI Becomes the Most Hype Entertainment</b></h1>
+                
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="Image/lucia.png" class="d-block w-100" >
+                      </div>
+                      <div class="carousel-item">
+                        <img src="Image/joker.png" class="d-block w-100" >
+                      </div>
+                      <div class="carousel-item">
+                        <img src="Image/gta6.png" class="d-block w-100" >
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+              <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
+                <div id="item-1">
+                  <h4>Description</h4>
+                <p>The gaming world is ablaze with excitement as Rockstar Games finally unveils the much-anticipated trailer for Grand Theft Auto VI (GTA 6). With a legacy of groundbreaking gameplay and immersive storytelling, the Grand Theft Auto series has captivated millions of players worldwide. As the sixth installment in the iconic franchise, GTA 6 promises to redefine the open-world gaming experience in ways never seen before.
+
+                </br><br>Set in the sprawling metropolis of Vice City, GTA 6 invites players to immerse themselves in a vibrant and dynamic world filled with endless possibilities. From the sun-drenched beaches to the neon-lit streets, Vice City pulsates with life and activity, offering players a playground of unprecedented scale and detail.</p>
+                </div>
+                <div id="item-1-1">
+                  <h5>Trailer 1</h5>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QdBZY2fkU-0?si=xmH4ujOw1axttWjH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+
+                  <p>The trailer opens with a breathtaking aerial view of Vice City, showcasing its iconic landmarks and bustling urban landscape. As the camera zooms in, we catch glimpses of the city's diverse neighborhoods, from the glitzy downtown district to the gritty back alleys where danger lurks around every corner.</br>
+
+                    <br> Vice City is more than just a backdrop for mayhem and mischief. It's a living, breathing ecosystem teeming with characters and stories waiting to be discovered. From high-profile celebrities to low-life criminals, the denizens of Vice City each have their own ambitions, desires, and agendas, shaping the city's ever-evolving narrative.</br>
+                    
+                    <br>As the trailer unfolds, we are introduced to the game's protagonist, a mysterious figure with a troubled past and uncertain future. With tensions rising and alliances shifting, players must navigate the treacherous waters of Vice City's criminal underworld, forging alliances, making enemies, and ultimately carving out their own path to power and influence.</br>
+                    
+                    <br>But amidst the chaos and carnage, there are moments of beauty and tranquility, as players can explore Vice City's vast wilderness, embark on epic road trips, or simply soak in the sights and sounds of the city at sunset. With stunning graphics and immersive gameplay, GTA 6 promises to deliver an experience that is as visually breathtaking as it is emotionally compelling.</p>
+                </div>
+                <div id="item-1-2">
+                  <h5>Item 1-2</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ab aspernatur illo, officiis amet sequi tenetur dolorum non minima neque! Veniam officiis mollitia saepe a nihil, laborum obcaecati quas. Accusantium?</p>
+                </div>
+                <div id="item-2">
+                  <h4>Gameplay</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, aspernatur. Esse dignissimos, fuga, animi perspiciatis voluptas dolorem expedita, eveniet provident eius amet aliquam exercitationem consectetur? Repellendus hic aperiam libero exercitationem!</p>
+                </div>
+                <div id="item-3">
+                  <h4>Item 3</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dolorem ullam, illum unde laborum architecto iure id deserunt quas alias beatae numquam optio aliquid perspiciatis et nisi ratione porro maiores.</p>
+                </div>
+                <div id="item-3-1">
+                  <h5>Item 3-1</h5>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente odio, excepturi eveniet hic quo facilis quos praesentium voluptatem amet iure accusantium nisi, sunt ullam nobis dolor. Iusto ex placeat ipsam.</p>
+                </div>
+                <div id="item-3-2">
+                  <h5>Real Joker</h5>
+                  <img src="Image/joker.png" class="d-block w-100" >
+                  <p>The gaming community is buzzing with speculation and excitement as rumors swirl about the potential involvement of one of fiction's most iconic villains, The Joker, in the upcoming release of Grand Theft Auto VI (GTA 6). While Rockstar Games has remained tight-lipped about the details of the highly anticipated game, the mere mention of The Joker's inclusion has sparked intense debate and anticipation among gamers worldwide.
+                </br>
+                    <br>The Joker, known for his chaotic and unpredictable nature, has long been a staple of popular culture, captivating audiences with his twisted sense of humor and nihilistic worldview. With his iconic green hair, eerie grin, and penchant for mayhem, The Joker embodies the very essence of chaos, making him a fitting addition to the anarchic world of GTA.
+                  </br>
+                    <br>Rumors about The Joker's involvement in GTA 6 first began circulating after leaked concept art surfaced online, depicting a character bearing a striking resemblance to the infamous clown prince of crime. While the authenticity of the images remains unconfirmed, they have reignited speculation about the direction that Rockstar Games may take with the next installment of the franchise.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-3 " >
+                    <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;" >
+                        <img src="Card-img/cp2077.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Cyberpunk 2045 Release Date</h5>
+                          <p class="card-text">Cyberpunk 2077 is an action role-playing video game set in a dystopian future where players assume the role of V, a mercenary navigating the bustling metropolis of Night City. </p>
+                          <a href="#" class="btn btn-danger">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                        <img src="Card-img/miles.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">New Upcoming Spiderman Titles</h5>
+                          <p class="card-text">Spider-Man: Miles Morales is an action-adventure video game that follows the journey of Miles Morales, a teenager who takes on the mantle of Spider-Man in New York City. </p>
+                          <a href="#" class="btn btn-danger">Go somewhere</a>
+                        </div>
+                    </div>
+                    <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+                        <img src="Card-img/wrench.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">New Hacker Game "Watch_Dogs"</h5>
+                          <p class="card-text">Watch Dogs: Legion is an action-adventure video game set in a near-future, dystopian version of London.</p>
+                          <a href="#" class="btn btn-danger">Go somewhere</a>
+                        </div>
+                    </div>
+          </div>
+
+
+    </div>
+</body>
+
+  <!-- Bootstrap JS (Optional, only if you need JavaScript features like closing the modal by clicking outside the modal) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Bootstrap JavaScript (bundle with Popper.js) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Ambil tombol toggle dark mode
+    const darkModeToggle = document.getElementById('darkModeToggle');
+
+    // Tambahkan event listener untuk mengatur tema saat toggle ditekan
+    darkModeToggle.addEventListener('change', function() {
+        // Periksa apakah toggle sedang dicentang atau tidak
+        if (darkModeToggle.checked) {
+            // Jika sedang dicentang, tambahkan kelas 'dark-mode' ke body
+            document.body.classList.add('dark-mode');
+        } else {
+            // Jika tidak dicentang, hapus kelas 'dark-mode' dari body
+            document.body.classList.remove('dark-mode');
+        }
+    });
+
+    // Fungsi untuk menyimpan preferensi tema ke localStorage
+    function saveThemePreference() {
+        // Simpan nilai toggle ke localStorage
+        localStorage.setItem('darkMode', darkModeToggle.checked);
+    }
+
+    // Fungsi untuk memuat preferensi tema dari localStorage saat halaman dimuat
+    function loadThemePreference() {
+        // Periksa apakah preferensi tema tersimpan di localStorage
+        if (localStorage.getItem('darkMode')) {
+            // Jika ada, atur toggle sesuai dengan nilai yang tersimpan
+            darkModeToggle.checked = JSON.parse(localStorage.getItem('darkMode'));
+            // Atur tema sesuai dengan nilai toggle yang tersimpan
+            if (darkModeToggle.checked) {
+                document.body.classList.add('dark-mode');
+            } else {
+                document.body.classList.remove('dark-mode');
+            }
+        }
+    }
+
+    // Panggil fungsi untuk memuat preferensi tema saat halaman dimuat
+    loadThemePreference();
+
+    // Tambahkan event listener untuk menyimpan preferensi tema saat toggle diubah
+    darkModeToggle.addEventListener('change', saveThemePreference);
+  </script>
+
+  
+</html>
