@@ -1,0 +1,41 @@
+/* Dark Mode Style */
+body.dark-mode {
+    background-color: #222 !important;
+    color: #fff !important;
+}
+
+/* Custom Styles for Mobile Devices */
+@media (max-width: 576px) {
+    .subscribe-btn-container {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .modal-body img {
+        width: 50%;
+    }
+
+    .card {
+        width: 50%; 
+        margin-bottom: 15px;
+    }
+
+    /* hilangkan tampilan dengan class berikut */
+    .hide-on-mobile {
+        display: none !important;
+    }
+}
+
+/* New Styles for Buttons */
+.button-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* New Style for Box */
+.color-box {
+    width: 200px;
+    height: 200px;
+    background-color: #f00;
+    margin-top: 20px;
+}
